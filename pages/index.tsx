@@ -1,34 +1,21 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import { GetStaticProps } from 'next';
 import { IBooks, IBooksFields, IMain, IMainFields } from '../contentful';
 import client from '../cms/index';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Link from 'next/link';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Book from '../components/Book';
 
 export default function Home({ home, books }: { home: IMain; books: IBooks[] }) {
-  console.log(books);
-
   return (
-    <div>
-      <header
-        className="header"
-        style={{ backgroundImage: `url(http://${home.fields.background?.fields.file.url})` }}>
-        <div className="title">{home.fields.title}</div>
-        <div className="description">{documentToReactComponents(home.fields.description)}</div>
-      </header>
-      <main>
+    <div className="container">
+      <Header home={home} />
+      <main className="content">
         {books.map((book) => (
-          <div key={book.fields.showDescription}>
-            <img src={`http://${book.fields.poster?.fields.file.url}`} alt="poster" />
-            <div>{book.fields.booktitle}</div>
-            <Link href={`/books/${book.fields.showDescription}`}>{book.fields.button}</Link>
-          </div>
+          <Book key={book.fields.showDescription} books={book} />
         ))}
       </main>
-      <footer>
-        <Link href={'https://github.com/Karabinskiy13'}>{home.fields.footer}</Link>
-      </footer>
+      <Footer home={home} />
     </div>
   );
 }

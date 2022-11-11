@@ -4,8 +4,10 @@ const contentfulManagement = require('contentful-management');
 
 module.exports = function () {
   const contentfulClient = contentfulManagement.createClient({
-    accessToken: 'CFPAT-9dKWzcOTDk_4RaQS4e0HslYq73KTdTSOKrb7wwADtJ8'
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN_ENVIROMENT
   });
 
-  return contentfulClient.getSpace('jds8b94xttqh').then((space) => space.getEnvironment('master'));
+  return contentfulClient
+    .getSpace(process.env.CONTENTFUL_SPACE_ID)
+    .then((space) => space.getEnvironment('master'));
 };
