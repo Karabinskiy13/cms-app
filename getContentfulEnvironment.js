@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const contentfulManagement = require('contentful-management');
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 module.exports = function () {
   const contentfulClient = contentfulManagement.createClient({

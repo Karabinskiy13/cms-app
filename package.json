@@ -20,6 +20,7 @@
     "contentful": "^9.2.11",
     "contentful-management": "^10.19.4",
     "contentful-typescript-codegen": "^3.2.3",
+    "dotenv": "^16.0.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "eslint-config-react-typescript": "^1.0.10",
