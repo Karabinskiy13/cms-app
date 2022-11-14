@@ -1,12 +1,14 @@
 import React from 'react';
-import { Books } from '../types';
 import Link from 'next/link';
+
+import { Books } from '../types';
+import Image from 'next/image';
 
 const Book = ({ books }: Books) => {
   const posterLink = `http://${books.fields.poster?.fields.file.url}`;
   return (
     <div className="book">
-      <img className="poster" src={posterLink} alt="poster" />
+      <Image className="poster" src={posterLink} width={270} height={400} alt="poster" />
       <div className="titlebook">{books.fields.booktitle}</div>
       <Link href={`/books/${books.fields.showDescription}`}>
         <button className="button">{books.fields.button}</button>

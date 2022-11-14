@@ -1,0 +1,59 @@
+@black: #000000;
+@backgroundsolid: rgba(44, 44, 44, 0.3);
+@backgroundcolor: rgba(0, 0, 0, 0.12);
+@font: Roboto, sans-serif;
+@white: #ffffff;
+
+.poster {
+  height: 400px;
+  width: 100%;
+  width: 270px;
+}
+.book {
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid @black;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  max-width: 300px;
+  width: 305px;
+}
+.button {
+  background: @backgroundsolid;
+  border-radius: 40px;
+  box-shadow: 0px 16px 16px 4px @backgroundcolor;
+  color: @white;
+  font-family: @font;
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 24px;
+  text-align: center;
+  text-shadow: 0px 40px 40px @backgroundcolor;
+  width: 200px;
+}
+.titlebook {
+  color: @black;
+  font-family: @font;
+  font-size: 16px;
+  padding: 10px;
+}
+.descriptionPage {
+  padding-top: 10px;
+  color: @black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titlePage {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.buttonPage:extend(.button) {
+  margin: 10px;
+}

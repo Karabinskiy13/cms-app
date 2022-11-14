@@ -1,7 +1,9 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
+
 import { IBooks, IBooksFields, IMain, IMainFields } from '../contentful';
 import client from '../cms/index';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Book from '../components/Book';

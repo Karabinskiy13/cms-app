@@ -1,14 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack']
-    });
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
 
-    return config;
+const withLess = require('next-with-less');
+
+module.exports = withLess({
+  reactStrictMode: true,
+  lessLoaderOptions: {},
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/jds8b94xttqh/**'
+      }
+    ]
   }
-};
-
-module.exports = nextConfig;
+});

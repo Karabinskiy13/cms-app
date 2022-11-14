@@ -1,3 +1,14 @@
+@desktop: 1500px;
+@desktop-area: 1450px;
+@minidesktop: 1200px;
+@minidesktop-area: 1140px;
+@tablet: 990px;
+@tablet-area: 960px;
+@minitablet: 770px;
+@minitablet-area: 720px;
+@phone: 580px;
+@phone-area: 540px;
+
 html,
 body {
   padding: 0;
@@ -15,41 +26,37 @@ a {
   padding: 0 15px;
 }
 
-@media (min-width: 575.98px) {
+@media (min-width: @phone) {
   .container {
-    max-width: 540px;
+    max-width: @phone-area;
     margin: auto;
     padding: 0;
   }
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: @minitablet) {
   .container {
-    max-width: 720px;
+    max-width: @minitablet-area;
   }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: @tablet) {
   .container {
-    max-width: 960px;
+    max-width: @tablet-area;
   }
 }
 
-@media (min-width: 1199.98px) {
+@media (min-width: @minidesktop) {
   .container {
-    max-width: 1140px;
+    max-width: @minidesktop-area;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: @desktop) {
   .container {
-    max-width: 1450px;
+    max-width: @desktop-area;
   }
 }
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1800px;
-  }
-}
+
 .container main {
   display: flex;
   flex-wrap: wrap;

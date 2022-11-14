@@ -7,7 +7,7 @@ const Footer = ({ home }: Home) => {
   const authorLink = 'https://github.com/Karabinskiy13';
   return (
     <div>
-      <footer>
+      <footer className="footer">
         <Link href={authorLink}>{home.fields.footer}</Link>
       </footer>
     </div>

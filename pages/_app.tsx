@@ -1,8 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import '../styles/header.css';
-import '../styles/book.css';
+
+import '../styles/globals.less';
+import '../styles/header.less';
+import '../styles/book.less';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
