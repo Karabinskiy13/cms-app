@@ -10,7 +10,7 @@ const Book = ({ books }: Books) => {
 
   return (
     <div className="book">
-      <Image className="poster" src={posterLink} width={270} height={400} alt="poster" />
+      <img className="poster" src={posterLink} width={270} height={400} alt="poster" />
       <div className="titlebook">{books.fields.booktitle}</div>
       <Link href={showDescription}>
         <button className="button">{books.fields.button}</button>
