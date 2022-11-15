@@ -9,7 +9,7 @@ module.exports = withLess({
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
+        protocol: 'https',
         hostname: 'images.ctfassets.net',
         port: '',
         pathname: '/jds8b94xttqh/**'
