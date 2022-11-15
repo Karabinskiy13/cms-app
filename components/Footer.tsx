@@ -5,6 +5,7 @@ import { Home } from '../types';
 
 const Footer = ({ home }: Home) => {
   const authorLink = 'https://github.com/Karabinskiy13';
+
   return (
     <div>
       <footer className="footer">
