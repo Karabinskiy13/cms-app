@@ -1,0 +1,67 @@
+@desktop: 1500px;
+@desktop-area: 1450px;
+@minidesktop: 1200px;
+@minidesktop-area: 1140px;
+@tablet: 990px;
+@tablet-area: 960px;
+@minitablet: 770px;
+@minitablet-area: 720px;
+@phone: 580px;
+@phone-area: 540px;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+@media (min-width: @phone) {
+  .container {
+    max-width: @phone-area;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: @minitablet) {
+  .container {
+    max-width: @minitablet-area;
+  }
+}
+
+@media (min-width: @tablet) {
+  .container {
+    max-width: @tablet-area;
+  }
+}
+
+@media (min-width: @minidesktop) {
+  .container {
+    max-width: @minidesktop-area;
+  }
+}
+@media (min-width: @desktop) {
+  .container {
+    max-width: @desktop-area;
+  }
+}
+
+.container main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
